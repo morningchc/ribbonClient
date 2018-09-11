@@ -7,7 +7,9 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by Administrator on 2018/6/28.
+ *
  */
+
 @Component
 public class RestTemplateConfig {
     @Bean
