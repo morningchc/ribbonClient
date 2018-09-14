@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * Created by Administrator on 2018/9/10.
  */
