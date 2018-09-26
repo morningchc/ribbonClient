@@ -31,7 +31,7 @@ public class Test {
     @GetMapping("/test")
     public String test(){
         logger.info("调用client服务welcome");
-        String msg = restTemplate.getForObject("http://client/client/welcome/welcome/chc",String.class);
+        String msg = restTemplate.getForObject("http://client/welcome/welcome/chc",String.class);
         return msg;
     }
     @GetMapping("/getTest")
@@ -40,7 +40,7 @@ public class Test {
         Map<String,String> param = new HashMap<>();
         param.put("name","chc");
         param.put("age","18");
-        String msg =  restTemplate.getForObject("http://client/client/welcome/getTest?name={name}&age={age}",String.class, param);
+        String msg =  restTemplate.getForObject("http://client/welcome/getTest?name={name}&age={age}",String.class, param);
         return msg;
     }
     @GetMapping("/postTest")
@@ -48,7 +48,9 @@ public class Test {
         User user = new User();
         user.setName("chc");
         user.setAge(18);
-        user = restTemplate.postForObject("http://client/client/welcome/postTest",user,User.class);
+        user = restTemplate.postForObject("http://client/welcome/postTest",user,User.class);
         return user.getName()+" "+user.getAge();
     }
+
+    
 }
